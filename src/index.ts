@@ -7,7 +7,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+ criar-conta
 app.post("/users", (req:Request, res:Response) => {
+
     
   const id = users.length+1
   
@@ -24,12 +26,14 @@ app.post("/users", (req:Request, res:Response) => {
 
 // app.get("/name" , (req:Request , res:Response) =>{          
     
+
 //     const name = pessoas.map((pessoa)=>{
 //       return pessoa.name
 //     })
     
 //     res.status(200).send(name)
 //     })
+
 
 
 app.listen('3003', () => {
