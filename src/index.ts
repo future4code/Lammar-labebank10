@@ -7,7 +7,8 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
- criar-conta
+//Funcionalidade de criar conta 
+
 app.post("/users", (req:Request, res:Response) => {
 
     
