@@ -74,6 +74,26 @@ app.get("/saldo", (req:Request, res:Response) => {
 
 } )
 
+app.patch("/saldo", (req:Request, res:Response) => {
+
+  try {
+    if(!(req.body.cpf && req.body.name && req.body.valor)){
+      throw new Error("Você precisa fornecer seu cpf, nome e o valor do seu depósito para verificar seu saldo")
+    }
+    if(req.body.valor <= 0){
+      throw new Error("O valor do depósito não pode ser igual ou menor que 0")
+    }
+    let accountIndex = users.findIndex((conta) => conta.cpf === req.body.cpf && conta.name === req.body.name)
+
+    users[accountIndex].balance += req.body.valor
+    
+    res.send(`Seu saldo é R$ ${users[accountIndex].balance}`)
+    
+  } catch (err:any) {
+    res.status(401).send(err.message)
+  }
+} )
+
 
 
 app.listen('3003', () => {
