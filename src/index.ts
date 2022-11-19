@@ -11,6 +11,7 @@ app.use(cors())
 
 app.post("/users", (req:Request, res:Response) => {
 
+
   try {
 
     //Validação de idade
@@ -35,7 +36,9 @@ app.post("/users", (req:Request, res:Response) => {
       throw new Error("Já existe um usuário cadastrado com esse CPF.")
     }
     
+
     const id = users.length+1
+
     
     users.push({
         id : id,
@@ -54,6 +57,7 @@ app.post("/users", (req:Request, res:Response) => {
 app.get("/users", (req:Request, res:Response) => {
       res.send(users)
 } )
+
 
 
 
