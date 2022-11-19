@@ -58,6 +58,21 @@ app.get("/users", (req:Request, res:Response) => {
       res.send(users)
 } )
 
+app.get("/saldo", (req:Request, res:Response) => {
+
+  try {
+    if(!(req.body.cpf && req.body.name)){
+      throw new Error("Você precisa fornecer seu cpf e nome para verificar seu saldo")
+    }
+    let saldo = (users.filter((conta) => req.body.cpf === conta.cpf && req.body.name === conta.name))[0].balance
+    res.send(`Seu saldo é R$ ${saldo}`)
+    
+  } catch (err:any) {
+    res.status(401).send(err.message)
+  }
+
+
+} )
 
 
 

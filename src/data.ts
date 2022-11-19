@@ -7,7 +7,7 @@ export const users:Account[]=[
       name:"Glhazyanno",
       cpf: "889.962.145-23",
       birth_date: "10/10/1995",
-      balance : 500000,
+      balance : 0,
       statement : []
     },
     {
@@ -15,7 +15,7 @@ export const users:Account[]=[
       name:"Fabiana",
       cpf: "889.962.145-29",
       birth_date: "10/10/1995",
-      balance : 500000,
+      balance : 0,
       statement : []
     },
     {
@@ -23,7 +23,7 @@ export const users:Account[]=[
       name:"zyanno",
       cpf: "889.962.145-28",
       birth_date: "10/10/1995",
-      balance : 500000,
+      balance : 0,
       statement : []
     },
     {
@@ -31,7 +31,7 @@ export const users:Account[]=[
       name:"Zé",
       cpf: "889.962.145-27",
       birth_date: "10/10/1995",
-      balance : 500000,
+      balance : 0,
       statement : []
     }
     ,
